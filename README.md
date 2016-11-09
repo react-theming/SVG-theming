@@ -10,9 +10,9 @@ This is a pilot project for theming of SVG elements
 ## Demo
 Explore this live demo project:
 
-[![Live demo](https://usulpro.github.io/SVG-theming/)
+[![Live demo](https://img.shields.io/badge/Live%20Demo-%20Storybook-brightgreen.svg)](https://usulpro.github.io/SVG-theming/)
 
 ## Core project
 in the core of this project is the [storybook-addon-material-ui](https://github.com/sm-react/storybook-addon-material-ui)
 
-[![screen1](docs/WatchMe.gif)](https://raw.githubusercontent.com/sm-react/storybook-addon-material-ui/master/docs/WatchMe.gif)
+[![screen1](https://raw.githubusercontent.com/sm-react/storybook-addon-material-ui/master/docs/WatchMe.gif)](https://github.com/sm-react/storybook-addon-material-ui)
