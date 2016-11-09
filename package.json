@@ -1,7 +1,7 @@
 {
-  "name": "storybook-addon-material-ui",
-  "version": "0.7.2",
-  "description": "Storybook Addon for Material Ui Library",
+  "name": "svg-theming",
+  "version": "0.1.0",
+  "description": "Theming solution for SVG",
   "main": "dist/index.js",
   "scripts": {
     "publish-storybook": ".scripts\\publish_storybook.cmd",
@@ -20,7 +20,7 @@
   },
   "keywords": [
     "storybook",
-    "react",
+    "SVG",
     "material",
     "ui",
     "material-ui",

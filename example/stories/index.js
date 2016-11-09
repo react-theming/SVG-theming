@@ -3,14 +3,24 @@ import { storiesOf, action, addDecorator } from '@kadira/storybook';
 
 import { muiTheme } from 'storybook-addon-material-ui';
 
-import CardExampleControlled from '../CardExampleControlled.jsx';
-import RaisedButtonExampleSimple from '../RaisedButtonExampleSimple.jsx';
-import DatePickerExampleSimple from '../DatePickerExampleSimple.jsx';
-
 import greyTheme from './greyTheme.json';
-import SupportProject from '../SupportProject.jsx';
 
-const SHOW_SUPPORT = true;
+// PumpkinHead
+import PumpkinHead from '../pumpkinHead.jsx';
+import pumOrigTheme from '../themes/pumOrigTheme.json';
+import pumFullTheme from '../themes/pumFullTheme.json';
+import pumAltTheme from '../themes/pumAltTheme.json';
+
+// Additional user themes
+import halloweentheme from '../themes/halloweentheme.json';
+import pumAlt2Theme from '../themes/pumAlt2Theme.json';
+import IrishPumpkin from '../themes/IrishPumpkin.json';
+import pumRick from '../themes/pumRick.json';
+import pumFullThemeLee from '../themes/pumFullThemeLee.json';
+import pumHead from '../themes/pumHead.json';
+const userTemes = [pumOrigTheme, pumFullTheme, pumAltTheme, pumHead, pumAlt2Theme, IrishPumpkin, pumRick, pumFullThemeLee, halloweentheme];
+
+
 
 /** note: decorators
  *  You can add decorator globally:
@@ -18,27 +28,17 @@ const SHOW_SUPPORT = true;
  *  You can pass a single object or an array of themes
  */
 
-storiesOf('Material-UI', module)
+addDecorator(muiTheme([...userTemes,]));
+
+storiesOf('Helloween', module)
     .addDecorator((story) => (
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <div style={{ width: '50%', maxWidth: 500, minWidth: 200 }}>
           {story()}
-          {SHOW_SUPPORT ? <SupportProject /> : null}
         </div>
       </div>
     ))
-    .addDecorator(muiTheme(['Light Theme', 'Dark Theme', greyTheme]))
-    .add('Card Example Controlled', () => (
-      <CardExampleControlled />
-    ))
-    .add('Raised Button Example Simple', () => (
-      <RaisedButtonExampleSimple />
-    ))
-    .add('Date Picker Example Simple', () => (
-      <DatePickerExampleSimple />
+    .add('Pumpkin Head', () => (
+      <PumpkinHead />
     ));
 
-storiesOf('Without addon', module)
-    .add('Text', () => (
-      <p>Lorem ipsum</p>
-    ));
